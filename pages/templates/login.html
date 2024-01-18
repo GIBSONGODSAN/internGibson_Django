@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login or Sign Up</title>
+</head>
+<body>
+    <h1>Login or Sign Up</h1>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label>Email:</label>
+        <input type="email" name="email"><br>
+        <label>Username:</label>
+        <input type="text" name="username" required><br>
+        <label>Password:</label>
+        <input type="password" name="password" required><br>
+        <label>Department:</label>
+        <input type="department" name="department"><br>
+        <label>Sports:</label>
+        <select name="department">
+            <option value="1">Cricket</option>
+            <option value="2">FootBall</option>
+            <option value="3">Kabaddi</option>
+            <option value="4">Chess</option>
+            <option value="5">VolleyBall</option>
+        </select><br>
+        <input type="submit" name="action" value="SignIn">
+        <input type="submit" name="action" value="SignUp">
+    </form>
+</body>
+</html>

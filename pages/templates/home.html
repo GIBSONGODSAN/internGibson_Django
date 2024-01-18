@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+
+    {% if user_profile %}
+        <h2>User Profile Details:</h2>
+        <p><strong>Department:</strong> {{ user_profile.department }}</p>
+        <p><strong>Sports:</strong> {{ sport_name }}</p>
+    {% else %}
+        <p>No user profile found.</p>
+    {% endif %}
+
+    <!-- Your home page content here -->
+</body>
+</html>
